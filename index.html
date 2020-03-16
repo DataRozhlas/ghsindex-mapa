@@ -1,0 +1,74 @@
+<html>
+
+<div id="container"></div>
+
+
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/mapdata/custom/world-palestine-highres.js"></script>
+
+<script>
+    const data = [ [ "VCT", 33 ], [ "ZWE", 38.2 ], [ "ZMB", 28.7 ], [ "YEM", 18.5 ], [ "VNM", 49.1 ], [ "VEN", 23 ], [ "VUT", 26.1 ], [ "UZB", 34.3 ], [ "URY", 41.3 ], [ "USA", 83.5 ], [ "GBR", 77.9 ], [ "ARE", 46.7 ], [ "UKR", 38 ], [ "UGA", 44.3 ], [ "TUV", 21.6 ], [ "TKM", 31.8 ], [ "TUR", 52.4 ], [ "TUN", 33.7 ], [ "TTO", 36.6 ], [ "TON", 25.1 ], [ "TGO", 32.5 ], [ "THA", 73.2 ], [ "TZA", 36.4 ], [ "TJK", 32.3 ], [ "SYR", 19.9 ], [ "CHE", 67 ], [ "SWE", 72.1 ], [ "SWZ", 31.1 ], [ "SUR", 36.5 ], [ "SDN", 26.2 ], [ "LCA", 35.3 ], [ "KNA", 26.2 ], [ "LKA", 33.9 ], [ "ESP", 65.9 ], [ "SSD", 21.7 ], [ "KOR", 70.2 ], [ "ZAF", 54.8 ], [ "SOM", 16.6 ], [ "SLB", 20.7 ], [ "SVN", 67.2 ], [ "SVK", 47.9 ], [ "SGP", 58.7 ], [ "SLE", 38.2 ], [ "SYC", 31.9 ], [ "SRB", 52.3 ], [ "SEN", 37.9 ], [ "SAU", 49.3 ], [ "STP", 17.7 ], [ "SMR", 31.1 ], [ "WSM", 26.4 ], [ "RWA", 34.2 ], [ "RUS", 44.3 ], [ "ROU", 45.8 ], [ "QAT", 41.2 ], [ "PRT", 60.3 ], [ "POL", 55.4 ], [ "PHL", 47.6 ], [ "PER", 49.2 ], [ "PRY", 35.7 ], [ "PNG", 27.8 ], [ "PAN", 43.7 ], [ "PLW", 21.9 ], [ "PAK", 35.5 ], [ "OMN", 43.1 ], [ "NOR", 64.6 ], [ "MKD", 39.1 ], [ "PRK", 17.5 ], [ "NIU", 20.5 ], [ "NGA", 37.8 ], [ "NER", 32.2 ], [ "NIC", 43.1 ], [ "NZL", 54 ], [ "NLD", 75.6 ], [ "NPL", 35.1 ], [ "NRU", 20.8 ], [ "NAM", 35.6 ], [ "MMR", 43.4 ], [ "MOZ", 28.1 ], [ "MAR", 43.7 ], [ "MNE", 43.7 ], [ "MNG", 49.5 ], [ "MCO", 32.7 ], [ "MDA", 42.9 ], [ "FSM", 32.8 ], [ "MEX", 57.6 ], [ "MUS", 34.9 ], [ "MRT", 27.5 ], [ "MHL", 18.2 ], [ "MLT", 37.3 ], [ "MLI", 29 ], [ "MDV", 33.8 ], [ "MYS", 62.2 ], [ "MWI", 28 ], [ "MDG", 40.1 ], [ "LUX", 43.8 ], [ "LTU", 55 ], [ "LIE", 43.5 ], [ "LBY", 25.7 ], [ "LBR", 35.1 ], [ "LSO", 30.2 ], [ "LBN", 43.1 ], [ "LVA", 62.9 ], [ "LAO", 43.1 ], [ "KGZ", 49.3 ], [ "KWT", 46.1 ], [ "KIR", 19.2 ], [ "KEN", 47.1 ], [ "KAZ", 40.7 ], [ "JOR", 42.1 ], [ "JPN", 59.8 ], [ "JAM", 29 ], [ "ITA", 56.2 ], [ "ISR", 47.3 ], [ "IRL", 59 ], [ "IRQ", 25.8 ], [ "IRN", 37.7 ], [ "IDN", 56.6 ], [ "IND", 46.5 ], [ "ISL", 46.3 ], [ "HUN", 54 ], [ "HND", 27.6 ], [ "HTI", 31.5 ], [ "GUY", 31.7 ], [ "GNB", 20 ], [ "GIN", 32.7 ], [ "GTM", 32.7 ], [ "GRD", 27.5 ], [ "GRC", 53.8 ], [ "GHA", 35.5 ], [ "DEU", 66 ], [ "GEO", 52 ], [ "GMB", 34.2 ], [ "GAB", 20 ], [ "FRA", 68.2 ], [ "FIN", 68.7 ], [ "FJI", 25.7 ], [ "ETH", 40.6 ], [ "EST", 57 ], [ "ERI", 22.4 ], [ "GNQ", 16.2 ], [ "SLV", 44.2 ], [ "EGY", 39.9 ], [ "ECU", 50.1 ], [ "DOM", 38.3 ], [ "DMA", 24 ], [ "DJI", 23.2 ], [ "DNK", 70.4 ], [ "CZE", 52 ], [ "CYP", 43 ], [ "CUB", 35.2 ], [ "HRV", 53.3 ], [ "CRI", 45.1 ], [ "COK", 20.4 ], [ "COD", 26.5 ], [ "COG", 23.6 ], [ "COM", 27.2 ], [ "COL", 44.2 ], [ "CHN", 48.2 ], [ "CHL", 58.3 ], [ "TCD", 28.8 ], [ "CAF", 27.3 ], [ "CAN", 75.3 ], [ "CMR", 34.4 ], [ "KHM", 39.2 ], [ "CPV", 29.3 ], [ "BDI", 22.8 ], [ "BFA", 30.1 ], [ "BGR", 45.6 ], [ "BRN", 32.6 ], [ "BRA", 59.7 ], [ "BWA", 31.1 ], [ "BIH", 42.8 ], [ "BOL", 35.8 ], [ "BTN", 40.3 ], [ "BEN", 28.8 ], [ "BLZ", 31.8 ], [ "BEL", 61 ], [ "BLR", 35.3 ], [ "BRB", 31.9 ], [ "BGD", 35 ], [ "BHR", 39.4 ], [ "BHS", 30.6 ], [ "AZE", 34.2 ], [ "AUT", 58.5 ], [ "AUS", 75.5 ], [ "ARM", 50.2 ], [ "ARG", 58.6 ], [ "ATG", 29 ], [ "AGO", 25.2 ], [ "AND", 30.5 ], [ "DZA", 23.6 ], [ "ALB", 52.9 ], [ "AFG", 32.3 ], [ "TLS", 26 ], [ "CIV", 35.5 ] ];
+    const slovnicek = [ ["AFG","Afghánistán"], ["ALA","Alandy"], ["ALB","Albánie"], ["DZA","Alžírsko"], ["ASM","Americká Samoa"], ["VIR","Americké Panenské ostrovy"], ["AND","Andorra"], ["AGO","Angola"], ["AIA","Anguilla"], ["ATA","Antarktida"], ["ATG","Antigua a Barbuda"], ["ARG","Argentina"], ["ARM","Arménie"], ["ABW","Aruba"], ["AUS","Austrálie"], ["AZE","Ázerbájdžán"], ["BHS","Bahamy"], ["BHR","Bahrajn"], ["BGD","Bangladéš"], ["BRB","Barbados"], ["BEL","Belgie"], ["BLZ","Belize"], ["BLR","Bělorusko"], ["BEN","Benin"], ["BMU","Bermudy"], ["BTN","Bhútán"], ["BOL","Bolívie"], ["BES","Bonaire, Svatý Eustach a Saba"], ["BIH","Bosna a Hercegovina"], ["BWA","Botswana"], ["BVT","Bouvetův ostrov"], ["BRA","Brazílie"], ["IOT","Britské indickooceánské území"], ["VGB","Britské Panenské ostrovy"], ["BRN","Brunej"], ["BGR","Bulharsko"], ["BFA","Burkina Faso"], ["BDI","Burundi"], ["COK","Cookovy ostrovy"], ["CUW","Curaçao"], ["TCD","Čad"], ["MNE","Černá Hora"], ["CZE","Česko"], ["CHN","Čína"], ["DNK","Dánsko"], ["COD","Konžská demokratická republika"], ["DMA","Dominika"], ["DOM","Dominikánská republika"], ["DJI","Džibutsko"], ["EGY","Egypt"], ["ECU","Ekvádor"], ["ERI","Eritrea"], ["EST","Estonsko"], ["ETH","Etiopie"], ["FRO","Faerské ostrovy"], ["FLK","Falklandy (Malvíny)"], ["FJI","Fidži"], ["PHL","Filipíny"], ["FIN","Finsko"], ["FRA","Francie"], ["GUF","Francouzská Guyana"], ["ATF","Francouzská jižní a antarktická území"], ["PYF","Francouzská Polynésie"], ["GAB","Gabon"], ["GMB","Gambie"], ["GHA","Ghana"], ["GIB","Gibraltar"], ["GRD","Grenada"], ["GRL","Grónsko"], ["GEO","Gruzie"], ["GLP","Guadeloupe"], ["GUM","Guam"], ["GTM","Guatemala"], ["GGY","Guernsey"], ["GIN","Guinea"], ["GNB","Guinea-Bissau"], ["GUY","Guyana"], ["HTI","Haiti"], ["HMD","Heardův ostrov a MacDonaldovy ostrovy"], ["HND","Honduras"], ["HKG","Hongkong"], ["CHL","Chile"], ["HRV","Chorvatsko"], ["IND","Indie"], ["IDN","Indonésie"], ["IRQ","Irák"], ["IRN","Írán"], ["IRL","Irsko"], ["ISL","Island"], ["ITA","Itálie"], ["ISR","Izrael"], ["JAM","Jamajka"], ["JPN","Japonsko"], ["YEM","Jemen"], ["JEY","Jersey"], ["ZAF","Jižní Afrika"], ["SGS","Jižní Georgie a Jižní Sandwichovy ostrovy"], ["SSD","Jižní Súdán"], ["JOR","Jordánsko"], ["CYM","Kajmanské ostrovy"], ["KHM","Kambodža"], ["CMR","Kamerun"], ["CAN","Kanada"], ["CPV","Kapverdy"], ["QAT","Katar"], ["KAZ","Kazachstán"], ["KEN","Keňa"], ["KIR","Kiribati"], ["CCK","Kokosové (Keelingovy) ostrovy"], ["COL","Kolumbie"], ["COM","Komory"], ["COG","Konžská republika"], ["PRK","Korejská lidově demokratická republika"], ["KOR","Korejská republika"], ["XXK","Kosovo"], ["CRI","Kostarika"], ["CUB","Kuba"], ["KWT","Kuvajt"], ["CYP","Kypr"], ["KGZ","Kyrgyzstán"], ["LAO","Laos"], ["LSO","Lesotho"], ["LBN","Libanon"], ["LBR","Libérie"], ["LBY","Libye"], ["LIE","Lichtenštejnsko"], ["LTU","Litva"], ["LVA","Lotyšsko"], ["LUX","Lucembursko"], ["MAC","Macao"], ["MDG","Madagaskar"], ["HUN","Maďarsko"], ["MKD","Severní Makedonie"], ["MYS","Malajsie"], ["MWI","Malawi"], ["MDV","Maledivy"], ["MLI","Mali"], ["MLT","Malta"], ["IMN","Man"], ["MAR","Maroko"], ["MHL","Marshallovy ostrovy"], ["MTQ","Martinik"], ["MUS","Mauricius"], ["MRT","Mauritánie"], ["MYT","Mayotte"], ["UMI","Menší odlehlé ostrovy USA"], ["MEX","Mexiko"], ["FSM","Mikronésie"], ["MDA","Moldavsko"], ["MCO","Monako"], ["MNG","Mongolsko"], ["MSR","Montserrat"], ["MOZ","Mosambik"], ["MMR","Myanmar"], ["NAM","Namibie"], ["NRU","Nauru"], ["DEU","Německo"], ["NPL","Nepál"], ["NER","Niger"], ["NGA","Nigérie"], ["NIC","Nikaragua"], ["NIU","Niue"], ["NLD","Nizozemsko"], ["NFK","Norfolk"], ["NOR","Norsko"], ["NCL","Nová Kaledonie"], ["NZL","Nový Zéland"], ["OMN","Omán"], ["PAK","Pákistán"], ["PLW","Palau"], ["PSE","Palestina"], ["PAN","Panama"], ["PNG","Papua Nová Guinea"], ["PRY","Paraguay"], ["PER","Peru"], ["PCN","Pitcairn"], ["CIV","Pobřeží slonoviny"], ["POL","Polsko"], ["PRI","Portoriko"], ["PRT","Portugalsko"], ["AUT","Rakousko"], ["REU","Réunion"], ["GNQ","Rovníková Guinea"], ["ROU","Rumunsko"], ["RUS","Rusko"], ["RWA","Rwanda"], ["GRC","Řecko"], ["SPM","Saint Pierre a Miquelon"], ["SLV","Salvador"], ["WSM","Samoa"], ["SMR","San Marino"], ["SAU","Saúdská Arábie"], ["SEN","Senegal"], ["MNP","Severní Mariany"], ["SYC","Seychely"], ["SLE","Sierra Leone"], ["SGP","Singapur"], ["SVK","Slovensko"], ["SVN","Slovinsko"], ["SOM","Somálsko"], ["ARE","Spojené arabské emiráty"], ["USA","Spojené státy"], ["SRB","Srbsko"], ["CAF","Středoafrická republika"], ["SDN","Súdán"], ["SUR","Surinam"], ["SHN","Svatá Helena"], ["LCA","Svatá Lucie"], ["BLM","Svatý Bartoloměj"], ["KNA","Svatý Kryštof a Nevis"], ["MAF","Svatý Martin (FR)"], ["SXM","Svatý Martin (NL)"], ["STP","Svatý Tomáš a Princův ostrov"], ["VCT","Svatý Vincenc a Grenadiny"], ["SWZ","Svazijsko"], ["SYR","Sýrie"], ["SLB","Šalomounovy ostrovy"], ["ESP","Španělsko"], ["SJM","Špicberky a Jan Mayen"], ["LKA","Šrí Lanka"], ["SWE","Švédsko"], ["CHE","Švýcarsko"], ["TJK","Tádžikistán"], ["TZA","Tanzanie"], ["THA","Thajsko"], ["TWN","Tchaj-wan"], ["TGO","Togo"], ["TKL","Tokelau"], ["TON","Tonga"], ["TTO","Trinidad a Tobago"], ["TUN","Tunisko"], ["TUR","Turecko"], ["TKM","Turkmenistán"], ["TCA","Turks a Caicos"], ["TUV","Tuvalu"], ["UGA","Uganda"], ["UKR","Ukrajina"], ["URY","Uruguay"], ["UZB","Uzbekistán"], ["CXR","Vánoční ostrov"], ["VUT","Vanuatu"], ["VAT","Vatikán"], ["GBR","Velká Británie"], ["VEN","Venezuela"], ["VNM","Vietnam"], ["TLS","Východní Timor"], ["WLF","Wallis a Futuna"], ["ZMB","Zambie"], ["ESH","Západní Sahara"], ["ZWE","Zimbabwe"] ];
+
+    Highcharts.mapChart('container', {
+        chart: {
+            map: 'custom/world-palestine-highres'
+        },
+        
+        title: {
+            text: 'Jak jsou státy připravené na náhlé zdravotní krize?'
+        },
+        
+        subtitle: {
+            text: 'Výsledky studie <a href="https://www.ghsindex.org/">2019 Global Health Security Index</a>'
+        },
+        credits: {
+            text: 'Zdroj dat: 2019 Global Health Security Index',
+            href: 'https://www.ghsindex.org/'
+        },
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+        
+        colorAxis: {
+            dataClasses: [{
+                name: 'nejméně připravené',
+                to: 33,
+                color: '#e41a1c'
+            }, {
+                from: 33.1,
+                to: 66,
+                name: 'středně připravené',
+                color: '#377eb8'
+            }, {
+                from: 66.1,
+                name: 'nejlépe připravené',
+                color: '#4daf4a'
+
+            }]
+        },
+        tooltip: {
+            formatter: function() {
+                let nazev = slovnicek.filter(i => i[0]===this.point["iso-a3"])[0][1];
+                return `<strong>${nazev}</strong><br>Global Health Security Index: <strong>${this.point.value.toString().replace('.',',')}</strong>`;
+                }
+        },
+        series: [{
+            data: data,
+            joinBy: ['iso-a3','hc-key'],
+            name: 'Global Health Security Index',
+            states: {
+                hover: {
+                    color: '#DCDCDC'
+                }
+            },
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    });
+</script>
+</html>
